@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		6785D3912370369E003B1636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3902370369E003B1636 /* AppDelegate.swift */; };
 		6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3922370369E003B1636 /* SceneDelegate.swift */; };
-		6785D3952370369E003B1636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* ViewController.swift */; };
-		6785D3982370369E003B1636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3962370369E003B1636 /* Main.storyboard */; };
+		6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* WikiSearchViewController.swift */; };
+		6785D3982370369E003B1636 /* WikiSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3962370369E003B1636 /* WikiSearch.storyboard */; };
 		6785D39A2370369F003B1636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3992370369F003B1636 /* Assets.xcassets */; };
 		6785D39D2370369F003B1636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D39B2370369F003B1636 /* LaunchScreen.storyboard */; };
 		6785D3A82370369F003B1636 /* GeoNamesWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3A72370369F003B1636 /* GeoNamesWikiTests.swift */; };
 		6785D3B32370369F003B1636 /* GeoNamesWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3B22370369F003B1636 /* GeoNamesWikiUITests.swift */; };
+		6785D3C823704568003B1636 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C723704568003B1636 /* Keyword.swift */; };
+		6785D3CA237046B6003B1636 /* GeoName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C9237046B6003B1636 /* GeoName.swift */; };
+		6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CB237047FA003B1636 /* WebServiceManager.swift */; };
+		6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,8 @@
 		6785D38D2370369E003B1636 /* GeoNamesWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNamesWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6785D3902370369E003B1636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6785D3922370369E003B1636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6785D3942370369E003B1636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6785D3972370369E003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6785D3942370369E003B1636 /* WikiSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchViewController.swift; sourceTree = "<group>"; };
+		6785D3972370369E003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WikiSearch.storyboard; sourceTree = "<group>"; };
 		6785D3992370369F003B1636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6785D39C2370369F003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6785D39E2370369F003B1636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		6785D3AE2370369F003B1636 /* GeoNamesWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoNamesWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6785D3B22370369F003B1636 /* GeoNamesWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNamesWikiUITests.swift; sourceTree = "<group>"; };
 		6785D3B42370369F003B1636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6785D3C723704568003B1636 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		6785D3C9237046B6003B1636 /* GeoName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoName.swift; sourceTree = "<group>"; };
+		6785D3CB237047FA003B1636 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNameResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6785D39B2370369F003B1636 /* LaunchScreen.storyboard */,
-				6785D3962370369E003B1636 /* Main.storyboard */,
+				6785D3962370369E003B1636 /* WikiSearch.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -156,7 +164,7 @@
 		6785D3C3237038EC003B1636 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6785D3942370369E003B1636 /* ViewController.swift */,
+				6785D3942370369E003B1636 /* WikiSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 		6785D3C42370392F003B1636 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6785D3CD2370BDE2003B1636 /* ResponseModel */,
 				6785D3C623703958003B1636 /* Models */,
 				6785D3C523703950003B1636 /* Managers */,
 			);
@@ -173,6 +182,7 @@
 		6785D3C523703950003B1636 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6785D3CB237047FA003B1636 /* WebServiceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -180,8 +190,18 @@
 		6785D3C623703958003B1636 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6785D3C723704568003B1636 /* Keyword.swift */,
+				6785D3C9237046B6003B1636 /* GeoName.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6785D3CD2370BDE2003B1636 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */,
+			);
+			path = ResponseModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +310,7 @@
 			files = (
 				6785D39D2370369F003B1636 /* LaunchScreen.storyboard in Resources */,
 				6785D39A2370369F003B1636 /* Assets.xcassets in Resources */,
-				6785D3982370369E003B1636 /* Main.storyboard in Resources */,
+				6785D3982370369E003B1636 /* WikiSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,9 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6785D3952370369E003B1636 /* ViewController.swift in Sources */,
+				6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */,
+				6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */,
+				6785D3C823704568003B1636 /* Keyword.swift in Sources */,
+				6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */,
 				6785D3912370369E003B1636 /* AppDelegate.swift in Sources */,
 				6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */,
+				6785D3CA237046B6003B1636 /* GeoName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +377,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6785D3962370369E003B1636 /* Main.storyboard */ = {
+		6785D3962370369E003B1636 /* WikiSearch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6785D3972370369E003B1636 /* Base */,
 			);
-			name = Main.storyboard;
+			name = WikiSearch.storyboard;
 			sourceTree = "<group>";
 		};
 		6785D39B2370369F003B1636 /* LaunchScreen.storyboard */ = {
