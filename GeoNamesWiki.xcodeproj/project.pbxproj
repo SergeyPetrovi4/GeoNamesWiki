@@ -99,13 +99,11 @@
 		6785D38F2370369E003B1636 /* GeoNamesWiki */ = {
 			isa = PBXGroup;
 			children = (
-				6785D3902370369E003B1636 /* AppDelegate.swift */,
-				6785D3922370369E003B1636 /* SceneDelegate.swift */,
-				6785D3942370369E003B1636 /* ViewController.swift */,
-				6785D3962370369E003B1636 /* Main.storyboard */,
-				6785D3992370369F003B1636 /* Assets.xcassets */,
-				6785D39B2370369F003B1636 /* LaunchScreen.storyboard */,
-				6785D39E2370369F003B1636 /* Info.plist */,
+				6785D3C1237038C2003B1636 /* Storyboard */,
+				6785D3C0237038B0003B1636 /* Application */,
+				6785D3C3237038EC003B1636 /* ViewControllers */,
+				6785D3C42370392F003B1636 /* Libraries */,
+				6785D3C2237038DC003B1636 /* Resources */,
 			);
 			path = GeoNamesWiki;
 			sourceTree = "<group>";
@@ -126,6 +124,64 @@
 				6785D3B42370369F003B1636 /* Info.plist */,
 			);
 			path = GeoNamesWikiUITests;
+			sourceTree = "<group>";
+		};
+		6785D3C0237038B0003B1636 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3922370369E003B1636 /* SceneDelegate.swift */,
+				6785D3902370369E003B1636 /* AppDelegate.swift */,
+				6785D39E2370369F003B1636 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6785D3C1237038C2003B1636 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6785D39B2370369F003B1636 /* LaunchScreen.storyboard */,
+				6785D3962370369E003B1636 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6785D3C2237038DC003B1636 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3992370369F003B1636 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6785D3C3237038EC003B1636 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3942370369E003B1636 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6785D3C42370392F003B1636 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3C623703958003B1636 /* Models */,
+				6785D3C523703950003B1636 /* Managers */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6785D3C523703950003B1636 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6785D3C623703958003B1636 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = GeoNamesWiki/Info.plist;
+				INFOPLIST_FILE = GeoNamesWiki/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = GeoNamesWiki/Info.plist;
+				INFOPLIST_FILE = GeoNamesWiki/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
