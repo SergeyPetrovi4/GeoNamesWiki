@@ -11,28 +11,34 @@ import UIKit
 class WikiSearchViewController: UITableViewController {
     
     private var geonames = [GeoName]()
+    private var searchController = UISearchController(searchResultsController: nil)
+    private var searchActivityIndicator = UIActivityIndicatorView(style: .medium)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let params: [String: String] = [
-            "q": "Tel Aviv",
-            "username": "tingz"
-        ]
-        
-        if !self.fetchData(byKey: params["q"]!) {
-            self.requestData(withParams: params)
-        }
+        self.setupUI()
     }
     
     // MARK: - Private
+    
+    private func setupUI() {
+        
+        self.searchController.searchBar.placeholder = "City name"
+        self.searchController.searchBar.delegate = self
+        self.navigationItem.searchController = self.searchController
+        
+        self.searchActivityIndicator.center = self.view.center
+        self.searchActivityIndicator.hidesWhenStopped = true
+        self.view.addSubview(self.searchActivityIndicator)
+    }
     
     // Fetch local data if exist
     private func fetchData(byKey key: String) -> Bool {
         
         if let requestKeyword = CoreDataManager.shared.isContextExists(by: key) as? Keyword, let geonames = requestKeyword.geonames {
 
-            self.geonames = Array(geonames)
+            self.geonames = Array(geonames).sorted(by: { $0.rank < $1.rank })
             self.tableView.reloadData()
             return true
         }
@@ -43,17 +49,19 @@ class WikiSearchViewController: UITableViewController {
     // Fetch remote data if local does not exist
     private func requestData(withParams params: [String : String]) {
         
+        self.searchActivityIndicator.startAnimating()
         WebServiceManager.shared.fetch(fromWebService: .geoNames, withParameters: params) { (keyword) in
             
             DispatchQueue.main.async {
                 
+                self.searchActivityIndicator.stopAnimating()
                 if keyword == nil {
                     
                     print("Error saving data to DB")
                     return
                 }
                 
-                self.fetchData(byKey: keyword!)
+                _ = self.fetchData(byKey: keyword!)
             }
             
         }
@@ -76,6 +84,30 @@ extension WikiSearchViewController {
         }
         
         return cell
+    }
+}
+
+extension WikiSearchViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
+        guard let key = searchBar.text, !key.isEmpty else {
+            return
+        }
+        
+        self.searchController.isActive = false
+        
+        // Checking cache by search key
+        if !self.fetchData(byKey: key) {
+            
+            let params: [String: String] = [
+                "q": key,
+                "username": "tingz"
+            ]
+                
+            self.requestData(withParams: params)
+        }
     }
 }
 
