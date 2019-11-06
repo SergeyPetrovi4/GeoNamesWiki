@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RappleProgressHUD
+import SafariServices
 
 class WikiSearchViewController: UITableViewController {
     
     private var geonames = [GeoName]()
     private var searchController = UISearchController(searchResultsController: nil)
-    private var searchActivityIndicator = UIActivityIndicatorView(style: .medium)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,9 @@ class WikiSearchViewController: UITableViewController {
     private func setupUI() {
         
         self.searchController.searchBar.placeholder = "City name"
+        self.searchController.searchBar.clipsToBounds = true
         self.searchController.searchBar.delegate = self
         self.navigationItem.searchController = self.searchController
-        
-        self.searchActivityIndicator.center = self.view.center
-        self.searchActivityIndicator.hidesWhenStopped = true
-        self.view.addSubview(self.searchActivityIndicator)
     }
     
     // Fetch local data if exist
@@ -46,15 +44,15 @@ class WikiSearchViewController: UITableViewController {
         return false
     }
     
-    // Fetch remote data if local does not exist
+    // Fetch remote data if local search key does not exist
     private func requestData(withParams params: [String : String]) {
         
-        self.searchActivityIndicator.startAnimating()
+        RappleActivityIndicatorView.startAnimating()
         WebServiceManager.shared.fetch(fromWebService: .geoNames, withParameters: params) { (keyword) in
             
             DispatchQueue.main.async {
+                RappleActivityIndicatorView.stopAnimation()
                 
-                self.searchActivityIndicator.stopAnimating()
                 if keyword == nil {
                     
                     print("Error saving data to DB")
@@ -80,7 +78,17 @@ extension WikiSearchViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GeonameTableViewCell.self), for: indexPath) as! GeonameTableViewCell
         cell.configure(withGeoname: self.geonames[indexPath.row]) { (geonameId) in
-            print(geonameId)
+            
+            
+            guard let geoname = self.geonames.filter({ $0.geoNameId == geonameId }).first,
+                let url = geoname.wikipediaUrl else {
+                print("Can`t fint Geoname with more info")
+                return
+            }
+            
+            let svc = SFSafariViewController(url: URL(string: "https://" + url)!)
+            svc.modalPresentationStyle = .pageSheet
+            self.navigationController?.present(svc, animated: true, completion: nil)
         }
         
         return cell
@@ -98,11 +106,13 @@ extension WikiSearchViewController: UISearchBarDelegate {
         
         self.searchController.isActive = false
         
-        // Checking cache by search key
-        if !self.fetchData(byKey: key) {
+        // Checking cache by search key.
+        // Parameter 'maxRows' = 10 by default
+        
+        if !self.fetchData(byKey: key.lowercased()) {
             
             let params: [String: String] = [
-                "q": key,
+                "q": key.lowercased(),
                 "username": "tingz"
             ]
                 

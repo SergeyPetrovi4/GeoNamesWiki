@@ -80,7 +80,7 @@ class GeonameTableViewCell: UITableViewCell {
         
         if let url = URL(string: self.geoname?.thumbnailImg ?? "") {
             self.thumbnailImg.kf.setImage(with: url)
-        }                
+        }
     }
     
     // MARK: - Action

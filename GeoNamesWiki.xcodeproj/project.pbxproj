@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		670811962372B54C009A132D /* GeonameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670811952372B54C009A132D /* GeonameTableViewCell.swift */; };
 		670811992372C3F3009A132D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 670811982372C3F3009A132D /* Kingfisher */; };
+		673B9BEF23730C9200C0951E /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 673B9BEE23730C9200C0951E /* RappleProgressHUD */; };
 		6785D3912370369E003B1636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3902370369E003B1636 /* AppDelegate.swift */; };
 		6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3922370369E003B1636 /* SceneDelegate.swift */; };
 		6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* WikiSearchViewController.swift */; };
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				670811992372C3F3009A132D /* Kingfisher in Frameworks */,
+				673B9BEF23730C9200C0951E /* RappleProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,7 @@
 			name = GeoNamesWiki;
 			packageProductDependencies = (
 				670811982372C3F3009A132D /* Kingfisher */,
+				673B9BEE23730C9200C0951E /* RappleProgressHUD */,
 			);
 			productName = GeoNamesWiki;
 			productReference = 6785D38D2370369E003B1636 /* GeoNamesWiki.app */;
@@ -305,6 +308,7 @@
 			mainGroup = 6785D3842370369E003B1636;
 			packageReferences = (
 				670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */,
 			);
 			productRefGroup = 6785D38E2370369E003B1636 /* Products */;
 			projectDirPath = "";
@@ -696,6 +700,14 @@
 				minimumVersion = 5.9.0;
 			};
 		};
+		673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rjeprasad/RappleProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -703,6 +715,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		673B9BEE23730C9200C0951E /* RappleProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */;
+			productName = RappleProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 
