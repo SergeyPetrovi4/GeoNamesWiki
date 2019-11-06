@@ -3,18 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670811962372B54C009A132D /* GeonameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670811952372B54C009A132D /* GeonameTableViewCell.swift */; };
+		670811992372C3F3009A132D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 670811982372C3F3009A132D /* Kingfisher */; };
+		673B9BEF23730C9200C0951E /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 673B9BEE23730C9200C0951E /* RappleProgressHUD */; };
 		6785D3912370369E003B1636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3902370369E003B1636 /* AppDelegate.swift */; };
 		6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3922370369E003B1636 /* SceneDelegate.swift */; };
-		6785D3952370369E003B1636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* ViewController.swift */; };
-		6785D3982370369E003B1636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3962370369E003B1636 /* Main.storyboard */; };
+		6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* WikiSearchViewController.swift */; };
+		6785D3982370369E003B1636 /* WikiSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3962370369E003B1636 /* WikiSearch.storyboard */; };
 		6785D39A2370369F003B1636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6785D3992370369F003B1636 /* Assets.xcassets */; };
 		6785D39D2370369F003B1636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6785D39B2370369F003B1636 /* LaunchScreen.storyboard */; };
 		6785D3A82370369F003B1636 /* GeoNamesWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3A72370369F003B1636 /* GeoNamesWikiTests.swift */; };
 		6785D3B32370369F003B1636 /* GeoNamesWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3B22370369F003B1636 /* GeoNamesWikiUITests.swift */; };
+		6785D3C823704568003B1636 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C723704568003B1636 /* Keyword.swift */; };
+		6785D3CA237046B6003B1636 /* GeoName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C9237046B6003B1636 /* GeoName.swift */; };
+		6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CB237047FA003B1636 /* WebServiceManager.swift */; };
+		6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */; };
+		6785D3D423715AC1003B1636 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D323715AC1003B1636 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670811952372B54C009A132D /* GeonameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeonameTableViewCell.swift; sourceTree = "<group>"; };
 		6785D38D2370369E003B1636 /* GeoNamesWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNamesWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6785D3902370369E003B1636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6785D3922370369E003B1636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6785D3942370369E003B1636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6785D3972370369E003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6785D3942370369E003B1636 /* WikiSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchViewController.swift; sourceTree = "<group>"; };
+		6785D3972370369E003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WikiSearch.storyboard; sourceTree = "<group>"; };
 		6785D3992370369F003B1636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6785D39C2370369F003B1636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6785D39E2370369F003B1636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +58,11 @@
 		6785D3AE2370369F003B1636 /* GeoNamesWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoNamesWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6785D3B22370369F003B1636 /* GeoNamesWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNamesWikiUITests.swift; sourceTree = "<group>"; };
 		6785D3B42370369F003B1636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6785D3C723704568003B1636 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		6785D3C9237046B6003B1636 /* GeoName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoName.swift; sourceTree = "<group>"; };
+		6785D3CB237047FA003B1636 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		6785D3D12370D010003B1636 /* Geonames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geonames.xcdatamodel; sourceTree = "<group>"; };
+		6785D3D323715AC1003B1636 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670811992372C3F3009A132D /* Kingfisher in Frameworks */,
+				673B9BEF23730C9200C0951E /* RappleProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670811942372B531009A132D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				670811952372B54C009A132D /* GeonameTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6785D3842370369E003B1636 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +123,11 @@
 		6785D38F2370369E003B1636 /* GeoNamesWiki */ = {
 			isa = PBXGroup;
 			children = (
-				6785D3902370369E003B1636 /* AppDelegate.swift */,
-				6785D3922370369E003B1636 /* SceneDelegate.swift */,
-				6785D3942370369E003B1636 /* ViewController.swift */,
-				6785D3962370369E003B1636 /* Main.storyboard */,
-				6785D3992370369F003B1636 /* Assets.xcassets */,
-				6785D39B2370369F003B1636 /* LaunchScreen.storyboard */,
-				6785D39E2370369F003B1636 /* Info.plist */,
+				6785D3C1237038C2003B1636 /* Storyboard */,
+				6785D3C0237038B0003B1636 /* Application */,
+				6785D3C3237038EC003B1636 /* ViewControllers */,
+				6785D3C42370392F003B1636 /* Libraries */,
+				6785D3C2237038DC003B1636 /* Resources */,
 			);
 			path = GeoNamesWiki;
 			sourceTree = "<group>";
@@ -128,6 +150,70 @@
 			path = GeoNamesWikiUITests;
 			sourceTree = "<group>";
 		};
+		6785D3C0237038B0003B1636 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3922370369E003B1636 /* SceneDelegate.swift */,
+				6785D3902370369E003B1636 /* AppDelegate.swift */,
+				6785D39E2370369F003B1636 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6785D3C1237038C2003B1636 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6785D39B2370369F003B1636 /* LaunchScreen.storyboard */,
+				6785D3962370369E003B1636 /* WikiSearch.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6785D3C2237038DC003B1636 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3992370369F003B1636 /* Assets.xcassets */,
+				6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6785D3C3237038EC003B1636 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3942370369E003B1636 /* WikiSearchViewController.swift */,
+				670811942372B531009A132D /* Views */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6785D3C42370392F003B1636 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3C623703958003B1636 /* Models */,
+				6785D3C523703950003B1636 /* Managers */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6785D3C523703950003B1636 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3CB237047FA003B1636 /* WebServiceManager.swift */,
+				6785D3D323715AC1003B1636 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6785D3C623703958003B1636 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6785D3C723704568003B1636 /* Keyword.swift */,
+				6785D3C9237046B6003B1636 /* GeoName.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +230,10 @@
 			dependencies = (
 			);
 			name = GeoNamesWiki;
+			packageProductDependencies = (
+				670811982372C3F3009A132D /* Kingfisher */,
+				673B9BEE23730C9200C0951E /* RappleProgressHUD */,
+			);
 			productName = GeoNamesWiki;
 			productReference = 6785D38D2370369E003B1636 /* GeoNamesWiki.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +306,10 @@
 				Base,
 			);
 			mainGroup = 6785D3842370369E003B1636;
+			packageReferences = (
+				670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */,
+			);
 			productRefGroup = 6785D38E2370369E003B1636 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,7 +328,7 @@
 			files = (
 				6785D39D2370369F003B1636 /* LaunchScreen.storyboard in Resources */,
 				6785D39A2370369F003B1636 /* Assets.xcassets in Resources */,
-				6785D3982370369E003B1636 /* Main.storyboard in Resources */,
+				6785D3982370369E003B1636 /* WikiSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +353,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6785D3952370369E003B1636 /* ViewController.swift in Sources */,
+				6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */,
+				6785D3C823704568003B1636 /* Keyword.swift in Sources */,
+				670811962372B54C009A132D /* GeonameTableViewCell.swift in Sources */,
+				6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */,
+				6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */,
 				6785D3912370369E003B1636 /* AppDelegate.swift in Sources */,
+				6785D3D423715AC1003B1636 /* CoreDataManager.swift in Sources */,
 				6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */,
+				6785D3CA237046B6003B1636 /* GeoName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +397,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6785D3962370369E003B1636 /* Main.storyboard */ = {
+		6785D3962370369E003B1636 /* WikiSearch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6785D3972370369E003B1636 /* Base */,
 			);
-			name = Main.storyboard;
+			name = WikiSearch.storyboard;
 			sourceTree = "<group>";
 		};
 		6785D39B2370369F003B1636 /* LaunchScreen.storyboard */ = {
@@ -436,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = GeoNamesWiki/Info.plist;
+				INFOPLIST_FILE = GeoNamesWiki/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = GeoNamesWiki/Info.plist;
+				INFOPLIST_FILE = GeoNamesWiki/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +690,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rjeprasad/RappleProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		670811982372C3F3009A132D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		673B9BEE23730C9200C0951E /* RappleProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673B9BED23730C9200C0951E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */;
+			productName = RappleProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6785D3D12370D010003B1636 /* Geonames.xcdatamodel */,
+			);
+			currentVersion = 6785D3D12370D010003B1636 /* Geonames.xcdatamodel */;
+			path = Geonames.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6785D3852370369E003B1636 /* Project object */;
 }
