@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @objc(Keyword)
-public class Keyword: NSManagedObject, Codable {
+public class Keyword: NSManagedObject, Decodable {
 
     @NSManaged var key: String?
     @NSManaged var geonames: Set<GeoName>?

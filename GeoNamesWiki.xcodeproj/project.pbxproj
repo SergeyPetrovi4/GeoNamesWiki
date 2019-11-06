@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670811962372B54C009A132D /* GeonameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670811952372B54C009A132D /* GeonameTableViewCell.swift */; };
+		670811992372C3F3009A132D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 670811982372C3F3009A132D /* Kingfisher */; };
 		6785D3912370369E003B1636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3902370369E003B1636 /* AppDelegate.swift */; };
 		6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3922370369E003B1636 /* SceneDelegate.swift */; };
 		6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3942370369E003B1636 /* WikiSearchViewController.swift */; };
@@ -18,7 +20,6 @@
 		6785D3C823704568003B1636 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C723704568003B1636 /* Keyword.swift */; };
 		6785D3CA237046B6003B1636 /* GeoName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C9237046B6003B1636 /* GeoName.swift */; };
 		6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CB237047FA003B1636 /* WebServiceManager.swift */; };
-		6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */; };
 		6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */; };
 		6785D3D423715AC1003B1636 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D323715AC1003B1636 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670811952372B54C009A132D /* GeonameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeonameTableViewCell.swift; sourceTree = "<group>"; };
 		6785D38D2370369E003B1636 /* GeoNamesWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoNamesWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6785D3902370369E003B1636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6785D3922370369E003B1636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 		6785D3C723704568003B1636 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		6785D3C9237046B6003B1636 /* GeoName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoName.swift; sourceTree = "<group>"; };
 		6785D3CB237047FA003B1636 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
-		6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNameResponseModel.swift; sourceTree = "<group>"; };
 		6785D3D12370D010003B1636 /* Geonames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geonames.xcdatamodel; sourceTree = "<group>"; };
 		6785D3D323715AC1003B1636 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670811992372C3F3009A132D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670811942372B531009A132D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				670811952372B54C009A132D /* GeonameTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6785D3842370369E003B1636 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6785D3942370369E003B1636 /* WikiSearchViewController.swift */,
+				670811942372B531009A132D /* Views */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,7 +188,6 @@
 		6785D3C42370392F003B1636 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6785D3CD2370BDE2003B1636 /* ResponseModel */,
 				6785D3C623703958003B1636 /* Models */,
 				6785D3C523703950003B1636 /* Managers */,
 			);
@@ -202,14 +212,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		6785D3CD2370BDE2003B1636 /* ResponseModel */ = {
-			isa = PBXGroup;
-			children = (
-				6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */,
-			);
-			path = ResponseModel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +228,9 @@
 			dependencies = (
 			);
 			name = GeoNamesWiki;
+			packageProductDependencies = (
+				670811982372C3F3009A132D /* Kingfisher */,
+			);
 			productName = GeoNamesWiki;
 			productReference = 6785D38D2370369E003B1636 /* GeoNamesWiki.app */;
 			productType = "com.apple.product-type.application";
@@ -298,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 6785D3842370369E003B1636;
+			packageReferences = (
+				670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 6785D38E2370369E003B1636 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,8 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6785D3952370369E003B1636 /* WikiSearchViewController.swift in Sources */,
-				6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */,
 				6785D3C823704568003B1636 /* Keyword.swift in Sources */,
+				670811962372B54C009A132D /* GeonameTableViewCell.swift in Sources */,
 				6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */,
 				6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */,
 				6785D3912370369E003B1636 /* AppDelegate.swift in Sources */,
@@ -678,6 +686,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		670811982372C3F3009A132D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 670811972372C3F3009A132D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */ = {

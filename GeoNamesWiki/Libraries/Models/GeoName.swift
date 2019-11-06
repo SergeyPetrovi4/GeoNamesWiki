@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @objc(GeoName)
-class GeoName: NSManagedObject, Codable {
+class GeoName: NSManagedObject, Decodable {
 
     @NSManaged public var countryCode: String?
     @NSManaged public var elevation: Int
@@ -23,6 +23,7 @@ class GeoName: NSManagedObject, Codable {
     @NSManaged public var summary: String?
     @NSManaged public var title: String?
     @NSManaged public var wikipediaUrl: String?
+    @NSManaged public var thumbnailImg: String?
     
     enum apiKey: String, CodingKey {
         case countryCode
@@ -36,6 +37,7 @@ class GeoName: NSManagedObject, Codable {
         case summary
         case title
         case wikipediaUrl
+        case thumbnailImg
     }
     
     @nonobjc public class func request() -> NSFetchRequest<GeoName> {
@@ -72,10 +74,7 @@ class GeoName: NSManagedObject, Codable {
         self.summary = try container.decodeIfPresent(String.self, forKey: .summary)
         self.title = try container.decodeIfPresent(String.self, forKey: .title)
         self.wikipediaUrl = try container.decodeIfPresent(String.self, forKey: .wikipediaUrl)
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        print()
+        self.thumbnailImg = try container.decodeIfPresent(String.self, forKey: .thumbnailImg)
     }
 }
 

@@ -41,23 +41,15 @@ class WebServiceManager {
                 
                 let decoder = JSONDecoder()
                 decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
-                let keyword = try decoder.decode(Keyword.self, withJSONObject: json as Any)
+                _ = try decoder.decode(Keyword.self, withJSONObject: json as Any)
                 CoreDataManager.shared.saveContext()
                 completion(parameters["q"])
                 
                 
             } catch let error {
                 print(error.localizedDescription)
+                completion(nil)
             }
-            
-//            let decoder = JSONDecoder()
-//            decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
-//
-//            do {
-//                let keyword = try? decoder.decode(Keyword.self, from: responseData)
-//                CoreDataManager.shared.saveContext()
-//                completion(parameters["q"])
-//            }
         }
         
         session.resume()
