@@ -29,18 +29,44 @@ class WebServiceManager {
         let request = URLRequest(url: components.url!)
         let session = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let data = data, let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode, error == nil else {
+            guard let responseData = data, let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode, error == nil else {
                 completion(nil)
                 return
             }
             
-            let decoder = JSONDecoder()
-            let geoNamesResponseModel = try? decoder.decode(GeoNameResponseModel.self, from: data)
-                        
-            completion(components.queryItems?.first?.value)
-
+            do {
+                
+                var json = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [String: Any]
+                json?["key"] = parameters["q"]
+                
+                let decoder = JSONDecoder()
+                decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
+                let keyword = try decoder.decode(Keyword.self, withJSONObject: json as Any)
+                CoreDataManager.shared.saveContext()
+                completion(parameters["q"])
+                
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            
+//            let decoder = JSONDecoder()
+//            decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
+//
+//            do {
+//                let keyword = try? decoder.decode(Keyword.self, from: responseData)
+//                CoreDataManager.shared.saveContext()
+//                completion(parameters["q"])
+//            }
         }
         
         session.resume()
+    }
+}
+
+extension JSONDecoder {
+    func decode<T: Decodable>(_ type: T.Type, withJSONObject object: Any, options opt: JSONSerialization.WritingOptions = []) throws -> T {
+        let data = try JSONSerialization.data(withJSONObject: object, options: opt)
+        return try decode(T.self, from: data)
     }
 }

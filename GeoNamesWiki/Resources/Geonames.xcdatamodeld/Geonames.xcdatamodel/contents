@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A582a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GeoName" representedClassName="GeoName" syncable="YES">
+        <attribute name="countryCode" optional="YES" attributeType="String"/>
+        <attribute name="elevation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feature" optional="YES" attributeType="String"/>
+        <attribute name="geoNameId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lang" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="wikipediaUrl" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Keyword" representedClassName="Keyword" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <relationship name="geonames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GeoName"/>
+    </entity>
+    <elements>
+        <element name="GeoName" positionX="99.796875" positionY="-64.859375" width="128" height="208"/>
+        <element name="Keyword" positionX="-78.140625" positionY="-25.4609375" width="128" height="73"/>
+    </elements>
+</model>

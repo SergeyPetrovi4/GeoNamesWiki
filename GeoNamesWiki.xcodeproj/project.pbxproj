@@ -19,6 +19,8 @@
 		6785D3CA237046B6003B1636 /* GeoName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3C9237046B6003B1636 /* GeoName.swift */; };
 		6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CB237047FA003B1636 /* WebServiceManager.swift */; };
 		6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */; };
+		6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */; };
+		6785D3D423715AC1003B1636 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6785D3D323715AC1003B1636 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		6785D3C9237046B6003B1636 /* GeoName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoName.swift; sourceTree = "<group>"; };
 		6785D3CB237047FA003B1636 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		6785D3CE2370BE01003B1636 /* GeoNameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoNameResponseModel.swift; sourceTree = "<group>"; };
+		6785D3D12370D010003B1636 /* Geonames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Geonames.xcdatamodel; sourceTree = "<group>"; };
+		6785D3D323715AC1003B1636 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6785D3992370369F003B1636 /* Assets.xcassets */,
+				6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6785D3CB237047FA003B1636 /* WebServiceManager.swift */,
+				6785D3D323715AC1003B1636 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -339,7 +345,9 @@
 				6785D3CF2370BE01003B1636 /* GeoNameResponseModel.swift in Sources */,
 				6785D3C823704568003B1636 /* Keyword.swift in Sources */,
 				6785D3CC237047FA003B1636 /* WebServiceManager.swift in Sources */,
+				6785D3D22370D010003B1636 /* Geonames.xcdatamodeld in Sources */,
 				6785D3912370369E003B1636 /* AppDelegate.swift in Sources */,
+				6785D3D423715AC1003B1636 /* CoreDataManager.swift in Sources */,
 				6785D3932370369E003B1636 /* SceneDelegate.swift in Sources */,
 				6785D3CA237046B6003B1636 /* GeoName.swift in Sources */,
 			);
@@ -670,6 +678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6785D3D02370D010003B1636 /* Geonames.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6785D3D12370D010003B1636 /* Geonames.xcdatamodel */,
+			);
+			currentVersion = 6785D3D12370D010003B1636 /* Geonames.xcdatamodel */;
+			path = Geonames.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6785D3852370369E003B1636 /* Project object */;
 }
